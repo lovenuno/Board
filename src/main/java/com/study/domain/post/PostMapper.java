@@ -17,5 +17,5 @@ public interface PostMapper {
 
     List<PostResponse> findAll();
 
-    int count();
+//    int count();
 }

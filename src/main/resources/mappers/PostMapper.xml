@@ -41,7 +41,7 @@
         FROM
         tb_post
         WHERE
-        id = #{value}
+        id = #{id}
     </select>
 
 
