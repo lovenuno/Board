@@ -1,6 +1,6 @@
-package com.board.study.entity.board;
+package com.study.entity.board;
 
-import com.board.study.entity.BaseTimeEntity;
+import com.study.entity.BaseTimeEntity;
 import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;

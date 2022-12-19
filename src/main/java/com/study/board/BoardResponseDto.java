@@ -1,6 +1,6 @@
-package com.board.study.dto.board;
+package com.study.board;
 
-import com.board.study.entity.board.Board;
+import com.study.entity.board.Board;
 import lombok.Getter;
 
 import java.time.LocalDateTime;

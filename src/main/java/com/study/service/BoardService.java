@@ -1,8 +1,8 @@
-package com.board.study.service;
+package com.study.service;
 
-import com.board.study.dto.board.BoardRequestDto;
-import com.board.study.dto.board.BoardResponseDto;
-import com.board.study.entity.board.BoardRepository;
+import com.study.board.BoardRequestDto;
+import com.study.board.BoardResponseDto;
+import com.study.entity.board.BoardRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -27,5 +27,17 @@ public class BoardService {
                 // .map(entity -> new BoardResponseDto(entity))
                 .map(BoardResponseDto::new)
                 .collect(Collectors.toList());
+    }
+
+    public BoardResponseDto findById(Long id){
+        return new BoardResponseDto(boardRepository.findById(id).get());
+    }
+
+    public int updateBoard(BoardRequestDto boardRequestDto){
+        return boardRepository.updateBoard(boardRequestDto);
+    }
+
+    public void deleteById(Long id){
+        boardRepository.deleteById(id);
     }
 }
