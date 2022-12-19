@@ -15,6 +15,8 @@ public interface PostMapper {
 
     void deleteById(Long id);
 
+    void deleteAll();
+
     List<PostResponse> findAll();
 
 //    int count();

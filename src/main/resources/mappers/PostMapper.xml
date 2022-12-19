@@ -17,7 +17,7 @@
 
 
     <!-- 게시글 저장 -->
-    <insert id="save" parameterType="com.study.domain.post.PostRequest">
+    <insert id="save" parameterType="com.study.domain.post.PostRequest" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO tb_post (
         <include refid="postColumns" />
         ) VALUES (
@@ -66,6 +66,10 @@
         delete_yn = 1
         WHERE
         id = #{id}
+    </delete>
+
+    <delete id="deleteAll">
+        delete from tb_post
     </delete>
 
 
